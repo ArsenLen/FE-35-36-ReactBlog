@@ -1,25 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
+import Greeting from './components/Greeting/Greeting';
+import Header from './components/Header/Header';
 
-function App() {
+const App = () => {
+  const course = "Frontend Pro"
+  const part1 = "Вводные занятия по React"
+  const tasks1 = 10
+  const part2 = "Использование React хуков"
+  const tasks2 = 5
+  const part3 = "Использование библиотеки react-router-dom"
+  const tasks3 = 15
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header course={course} />
+      <p>
+        {part1} {tasks1}
+      </p>
+      <p>
+        {part2} {tasks2}
+      </p>
+      <p>
+        {part3} {tasks3}
+      </p>
+      <p>Общее количество задач: 'N' - сюда вывести общее число тасков</p>
     </div>
   );
 }
 
 export default App;
+// Состояние - данные, с которыми работает и от которых зависит компонент
+/*
+const App = () => {
+  const course = "Frontend Pro"
+  const part1 = "Вводные занятия по React"
+  const tasks1 = 10
+  const part2 = "Использование React хуков"
+  const tasks2 = 5
+  const part3 = "Использование библиотеки react-router-dom"
+  const tasks3 = 15
+    return (
+      <div className="App">
+          <Header course={course} />
+          <Content ... />
+          <Total ... /> 
+      </div>
+    );
+}
+
+const Content = () => {
+  return (
+    <div>
+      <Part ... />
+      <Part ... />
+      <Part ... />
+    </div>
+  )
+}
+*/
